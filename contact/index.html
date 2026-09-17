@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - WorldsFly</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="https://worldsfly.com/assets/worldsfly-logo.png" alt="WorldsFly Logo" class="logo-img">
+            </a>
+            
+            <nav class="nav-links">
+                <a href="../about/index.html">About Us</a>
+                <a href="index.html" class="active">Contact Us</a>
+                <a href="../index.html" class="login-link">Log In</a>
+                <a href="../index.html?mode=signup" class="btn-get-started">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-container">
+        
+        <div class="page-header">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Reach out with questions, feedback, or support requests.</p>
+        </div>
+
+        <div class="contact-grid">
+            
+            <div class="info-cards-stack">
+                
+                <div class="info-card">
+                    <div class="icon-badge icon-purple">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <h3>Email Support</h3>
+                    <a href="mailto:support@worldsfly.com" class="card-link">support@worldsfly.com</a>
+                    <p class="sub-text">We respond within 24 hours.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon-badge icon-green">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Headquarters</h3>
+                    <p class="bold-text">WorldsFly Inc.</p>
+                    <p class="address-text">336-B, Gulgasht Colony<br>Multan, 60000</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon-badge icon-purple">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Live Support</h3>
+                    <p class="sub-text">Available to members inside the platform via the Support section.</p>
+                </div>
+
+            </div>
+
+            <div class="form-card">
+                <h2>Send us a message</h2>
+
+                <form id="contactForm" onsubmit="handleFormSubmit(event)" class="contact-form">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+
+                    <div class="form-group flex-message">
+                        <label for="message">Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+
+                    <div class="captcha-wrapper">
+                        <div class="cf-turnstile margin-top-20" data-sitekey="0x4AAAAAAEL0_BpFQ5jS9nvN" data-theme="light"></div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+            <p class="modal-text">Message sent successfully!</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../about/index.html">About Us</a>
+            <a href="index.html">Contact Us</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <p class="copyright">&copy; 2026 WorldsFly. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Open custom modal popup
+            document.getElementById('customModal').classList.add('active');
+
+            // Reset form fields
+            document.getElementById('contactForm').reset();
+        }
+
+        function closeModal() {
+            document.getElementById('customModal').classList.remove('active');
+        }
+
+        // Close modal when clicking outside the box
+        window.onclick = function(event) {
+            const modal = document.getElementById('customModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>

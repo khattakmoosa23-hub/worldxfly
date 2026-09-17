@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feed Page | WorldsFly</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP NAV -->
+<div class="topnav">
+ <div class="icon-btn hamburger-btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></div>
+ <img src="https://worldsfly.com/assets/worldsfly-logo.png" alt="WorldsFly Logo" class="wf-official-logo">
+  <div class="searchbar">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" placeholder="Search WorldsFly...">
+  </div>
+  <div class="nav-icons">
+    <div class="icon-btn active"><i class="fa-solid fa-house"></i></div>
+    <div class="icon-btn"><i class="fa-solid fa-user-group"></i></div>
+    <div class="icon-btn"><i class="fa-solid fa-table-cells"></i></div>
+    <div class="icon-btn"><i class="fa-solid fa-file-lines"></i></div>
+    <div class="icon-btn"><i class="fa-solid fa-comment"></i></div>
+    <div class="icon-btn"><i class="fa-solid fa-bell"></i></div>
+    <img class="nav-avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="profile">
+  </div>
+</div>
+
+<!-- Mobile sidebar overlay backdrop -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar-left">
+    <div class="sidebar-close-btn" onclick="closeSidebar()"><i class="fa-solid fa-xmark"></i></div>
+    <div class="profile-row">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+      <span>WF Admin!</span>
+    </div>
+    <ul class="nav-list">
+      <li><span class="ic"><i class="fa-solid fa-user-group"></i></span>Friends</li>
+      <li><span class="ic"><i class="fa-solid fa-table-cells-large"></i></span>Groups</li>
+      <li><span class="ic"><i class="fa-solid fa-file"></i></span>Pages</li>
+      <li><span class="ic"><i class="fa-regular fa-calendar"></i></span>Events</li>
+      <li><span class="ic"><i class="fa-solid fa-plane"></i></span>Airlines</li>
+      <li><span class="ic"><i class="fa-solid fa-circle-check"></i></span>Trade Partners</li>
+      <li><span class="ic"><i class="fa-solid fa-location-dot"></i></span>People Nearby</li>
+      <li><span class="ic"><i class="fa-regular fa-comment-dots"></i></span>Messages</li>
+      <li><span class="ic"><i class="fa-regular fa-circle-question"></i></span>Support</li>
+      <li><span class="ic"><i class="fa-solid fa-bullhorn"></i></span>Submit Ad</li>
+      <li><span class="ic"><i class="fa-regular fa-rectangle-list"></i></span>My Ads</li>
+      <li class="active-item"><span class="ic"><i class="fa-solid fa-layer-group"></i></span>Admin Panel</li>
+    </ul>
+
+    <hr class="side-divider">
+    <div class="side-label">YOUR GROUPS</div>
+    <div class="group-item">
+      <div class="group-avatar" style="background:#7b3ff2;">T</div>
+      <span>Tech Enthusiasts</span>
+    </div>
+    <div class="group-item">
+      <div class="group-avatar" style="background:#f0722f;">P</div>
+      <span>Private Circle</span>
+    </div>
+    <div class="group-item">
+      <div class="group-avatar" style="background:#2f8ff0;">M</div>
+      <span>Multan</span>
+    </div>
+    <div class="group-item">
+      <div class="group-avatar" style="background:#2fb86b;">D</div>
+      <span>Design Hub</span>
+    </div>
+  </div>
+
+  <!-- CENTER FEED -->
+  <div class="feed">
+
+    <!-- Stories -->
+    <div class="card" style="padding:0;">
+      <div class="stories">
+        <div class="story add-story">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+          <div class="add-plus"><i class="fa-solid fa-plus"></i></div>
+          <div class="story-name">Your Story</div>
+        </div>
+        <div class="story" style="background-image:url('https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=300&q=80');">
+          <img class="story-avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+          <div class="story-name">Muhammad Musa</div>
+        </div>
+        <div class="story" style="background-image:url('https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?w=300&q=80');">
+          <img class="story-avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+          <div class="story-name">WF Admin!</div>
+        </div>
+        <div class="story" style="background-image:url('https://images.unsplash.com/photo-1517824806704-9040b037703b?w=300&q=80');">
+          <img class="story-avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+          <div class="story-name">Muhammad Musa</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Composer -->
+    <div class="card">
+      <div class="composer-top">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+        <input type="text" placeholder="What's on your mind, WF Admin!?" readonly>
+      </div>
+      <div class="composer-actions">
+        <div class="cbtn photo"><i class="fa-solid fa-image"></i> Photo/Video</div>
+        <div class="cbtn feeling"><i class="fa-regular fa-face-smile"></i> Feeling/Activity</div>
+      </div>
+    </div>
+
+    <!-- Post 1 -->
+    <div class="card">
+      <div class="post-header">
+        <img class="avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+        <div class="who">
+          <div class="name-line">Muhammad Musa <span style="font-weight:400;color:var(--text-grey);font-size:13.5px;">is feeling</span> <span class="feeling-badge">🎉 Blessed</span></div>
+          <div class="post-meta">5 days ago <i class="fa-solid fa-location-dot" style="font-size:10px;"></i></div>
+        </div>
+        <div class="post-menu"><i class="fa-solid fa-ellipsis"></i></div>
+      </div>
+      <div class="post-text">Alhamdu lillah!</div>
+      <div class="post-actions">
+        <div class="abtn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-thumbs-up"></i> <span class="like-label">Like</span><span class="like-count"></span></div>
+        <div class="abtn"><i class="fa-regular fa-comment"></i> Comment</div>
+        <div class="abtn"><i class="fa-solid fa-share"></i> Share</div>
+        <div class="abtn"><i class="fa-solid fa-language"></i> Translate</div>
+      </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="card" style="padding:16px 0 16px;">
+      <div style="padding:0 16px;">
+        <div class="post-header">
+          <img class="avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+          <div class="who">
+            <div class="name-line">WF Admin! <i class="fa-solid fa-circle-check verified"></i></div>
+            <div class="post-meta">1 week ago <i class="fa-solid fa-location-dot" style="font-size:10px;"></i></div>
+          </div>
+          <div class="post-menu"><i class="fa-solid fa-ellipsis"></i></div>
+        </div>
+        <div class="post-text">beautiful view</div>
+      </div>
+      <img class="post-image" src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?w=900&q=80" alt="moon">
+      <div class="post-actions" style="padding:14px 16px 0;">
+        <div class="abtn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-thumbs-up"></i> <span class="like-label">Like</span><span class="like-count"></span></div>
+        <div class="abtn"><i class="fa-regular fa-comment"></i> Comment</div>
+        <div class="abtn"><i class="fa-solid fa-share"></i> Share</div>
+        <div class="abtn"><i class="fa-solid fa-language"></i> Translate</div>
+      </div>
+    </div>
+
+    <!-- Post 3 -->
+    <div class="card" style="padding:16px 0 16px;">
+      <div style="padding:0 16px;">
+        <div class="post-header">
+          <img class="avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+          <div class="who">
+            <div class="name-line">Muhammad Musa</div>
+            <div class="post-meta">2 days ago <i class="fa-solid fa-location-dot" style="font-size:10px;"></i></div>
+          </div>
+          <div class="post-menu"><i class="fa-solid fa-ellipsis"></i></div>
+        </div>
+        <div class="post-text">Peace feels different under a sky like this.</div>
+      </div>
+      <img class="post-image" src="https://images.unsplash.com/photo-1517824806704-9040b037703b?w=900&q=80" alt="coast">
+      <div class="post-actions" style="padding:14px 16px 0;">
+        <div class="abtn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-thumbs-up"></i> <span class="like-label">Like</span><span class="like-count"></span></div>
+        <div class="abtn"><i class="fa-regular fa-comment"></i> Comment</div>
+        <div class="abtn"><i class="fa-solid fa-share"></i> Share</div>
+        <div class="abtn"><i class="fa-solid fa-language"></i> Translate</div>
+      </div>
+    </div>
+
+    <!-- Post 4 -->
+    <div class="card">
+      <div class="post-header">
+        <img class="avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+        <div class="who">
+          <div class="name-line">WF Admin! <i class="fa-solid fa-circle-check verified"></i></div>
+          <div class="post-meta">3 days ago <i class="fa-solid fa-location-dot" style="font-size:10px;"></i></div>
+        </div>
+        <div class="post-menu"><i class="fa-solid fa-ellipsis"></i></div>
+      </div>
+      <div class="post-text">Excited to share some updates coming soon to WorldsFly!</div>
+      <div class="post-actions">
+        <div class="abtn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-thumbs-up"></i> <span class="like-label">Like</span><span class="like-count"></span></div>
+        <div class="abtn"><i class="fa-regular fa-comment"></i> Comment</div>
+        <div class="abtn"><i class="fa-solid fa-share"></i> Share</div>
+        <div class="abtn"><i class="fa-solid fa-language"></i> Translate</div>
+      </div>
+    </div>
+
+    <!-- Post 5 -->
+    <div class="card" style="padding:16px 0 16px;">
+      <div style="padding:0 16px;">
+        <div class="post-header">
+          <img class="avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+          <div class="who">
+            <div class="name-line">Muhammad Musa</div>
+            <div class="post-meta">6 days ago <i class="fa-solid fa-location-dot" style="font-size:10px;"></i></div>
+          </div>
+          <div class="post-menu"><i class="fa-solid fa-ellipsis"></i></div>
+        </div>
+        <div class="post-text">Saturn state of mind.</div>
+      </div>
+      <img class="post-image" src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=900&q=80" alt="mountain">
+      <div class="post-actions" style="padding:14px 16px 0;">
+        <div class="abtn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-thumbs-up"></i> <span class="like-label">Like</span><span class="like-count"></span></div>
+        <div class="abtn"><i class="fa-regular fa-comment"></i> Comment</div>
+        <div class="abtn"><i class="fa-solid fa-share"></i> Share</div>
+        <div class="abtn"><i class="fa-solid fa-language"></i> Translate</div>
+      </div>
+    </div>
+
+    <!-- Post 6 -->
+    <div class="card">
+      <div class="post-header">
+        <img class="avatar" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-photo="me" alt="">
+        <div class="who">
+          <div class="name-line">WF Admin! <i class="fa-solid fa-circle-check verified"></i></div>
+          <div class="post-meta">1 week ago <i class="fa-solid fa-location-dot" style="font-size:10px;"></i></div>
+        </div>
+        <div class="post-menu"><i class="fa-solid fa-ellipsis"></i></div>
+      </div>
+      <div class="post-text">Weekend plans: coffee, code, repeat.</div>
+      <div class="post-actions">
+        <div class="abtn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-thumbs-up"></i> <span class="like-label">Like</span><span class="like-count"></span></div>
+        <div class="abtn"><i class="fa-regular fa-comment"></i> Comment</div>
+        <div class="abtn"><i class="fa-solid fa-share"></i> Share</div>
+        <div class="abtn"><i class="fa-solid fa-language"></i> Translate</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <div class="sidebar-right">
+
+    <div class="card location-card">
+      <div class="loc-title"><i class="fa-solid fa-location-dot"></i> Share your location for others to know</div>
+      <div class="location-buttons">
+        <button class="btn-purple">Share Location</button>
+        <button class="btn-grey">No Thanks</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="widget-title">News Feed</div>
+      <div class="news-item">
+        <img src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?w=120&q=80" alt="">
+        <p>Apollo v Artemis: How the Earth changed in 58 years</p>
+      </div>
+    </div>
+
+    <div class="card ad-card">
+      <div class="widget-title">Advertise Here</div>
+      <p>Reach thousands of WorldsFly members with your ad.</p>
+      <button class="btn-purple" style="width:100%;">Submit Your Ad</button>
+    </div>
+
+    <div class="card">
+      <div class="widget-title-row">
+        <div class="widget-title" style="margin:0;">People You May Know</div>
+        <div class="see-all">See All</div>
+      </div>
+      <div class="person-row">
+        <div class="person-avatar">BH</div>
+        <div class="person-info">
+          <div class="pname">Bilal Hassan</div>
+          <div class="addfriend">+ Add Friend</div>
+        </div>
+      </div>
+      <div class="person-row">
+        <div class="person-avatar">FM</div>
+        <div class="person-info">
+          <div class="pname">Fatima Malik</div>
+          <div class="addfriend">+ Add Friend</div>
+        </div>
+      </div>
+      <div class="person-row">
+        <div class="person-avatar">HA</div>
+        <div class="person-info">
+          <div class="pname">Hammad</div>
+          <div class="addfriend">+ Add Friend</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="widget-title-row">
+        <div class="widget-title" style="margin:0;">Pages You Might Like</div>
+        <div class="see-all">See All</div>
+      </div>
+      <div class="page-row">
+        <div class="page-avatar">P</div>
+        <div class="page-info">
+          <div class="pgname">Pakistan Flight Deals</div>
+          <div class="pgmeta">Travel &amp; Tourism • 8 followers</div>
+        </div>
+        <button class="btn-follow">Follow</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
